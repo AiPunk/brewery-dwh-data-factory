@@ -1,0 +1,53 @@
+{
+	"name": "Source_Brewery_Ingredients",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "dig_brewery_postgres",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzurePostgreSqlTable",
+		"schema": [
+			{
+				"name": "id",
+				"type": "integer",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "experiment_id",
+				"type": "integer",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "name",
+				"type": "text",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "description",
+				"type": "text",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "amount",
+				"type": "integer",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "unit",
+				"type": "character varying",
+				"precision": 0,
+				"scale": 0
+			}
+		],
+		"typeProperties": {
+			"schema": "sppl",
+			"table": "pd_ingredients"
+		}
+	}
+}
