@@ -1,5 +1,5 @@
 {
-	"name": "data-vault",
+	"name": "pg-dv",
 	"properties": {
 		"annotations": []
 	}

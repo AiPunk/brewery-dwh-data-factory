@@ -1,0 +1,24 @@
+{
+	"name": "pg-dv",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "Source_Brewery_Ingredients",
+						"type": "DatasetReference"
+					},
+					"name": "SourceIngredients"
+				}
+			],
+			"sinks": [],
+			"transformations": [
+				{
+					"name": "HashColumns"
+				}
+			],
+			"script": "source(output(\n\t\tid as integer,\n\t\texperiment_id as integer,\n\t\tname as string,\n\t\tdescription as string,\n\t\tamount as integer,\n\t\tunit as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> SourceIngredients\nSourceIngredients derive(hub_pd_ingredients_pk = sha2(256, name, id),\n\t\trecord_source = \"brewery\",\n\t\tload_date = currentTimestamp()) ~> HashColumns"
+		}
+	}
+}
