@@ -1,0 +1,38 @@
+{
+	"name": "Sink_Brewery_H_Ingredients",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "dig_brewery_postgres",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "PG_Sink"
+		},
+		"annotations": [],
+		"type": "AzurePostgreSqlTable",
+		"schema": [
+			{
+				"name": "hub_pd_ingredients_pk",
+				"type": "text",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "record_source",
+				"type": "text",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "load_date",
+				"type": "timestamp without time zone",
+				"precision": 0,
+				"scale": 0
+			}
+		],
+		"typeProperties": {
+			"schema": "brewery_data_vault",
+			"table": "h_pd_ingredients"
+		}
+	}
+}
