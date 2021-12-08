@@ -5,6 +5,9 @@
 			"referenceName": "dig_brewery_postgres",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "Sources"
+		},
 		"annotations": [],
 		"type": "AzurePostgreSqlTable",
 		"schema": [
