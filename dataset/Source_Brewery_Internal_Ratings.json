@@ -1,0 +1,35 @@
+{
+	"name": "Source_Brewery_Internal_Ratings",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "dig_brewery_postgres",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzurePostgreSqlTable",
+		"schema": [
+			{
+				"name": "experiment_id",
+				"type": "integer",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "rated_by",
+				"type": "text",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "rating",
+				"type": "integer",
+				"precision": 0,
+				"scale": 0
+			}
+		],
+		"typeProperties": {
+			"schema": "sppl",
+			"table": "pd_internal_ratings"
+		}
+	}
+}
